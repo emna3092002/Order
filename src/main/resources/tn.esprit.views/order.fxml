@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="tn.esprit.controllers.OrderController">
+
+    <Label text="Gestion des Commandes" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <VBox>
+            <Label text="Utilisateur:"/>
+            <ComboBox fx:id="userComboBox"/>
+        </VBox>
+
+        <VBox>
+            <Label text="Produits (Ctrl+Click pour sélectionner plusieurs):"/>
+            <ListView fx:id="productListView" prefHeight="150" prefWidth="200"/>
+            <Button text="Aller à Product" onAction="#handleGoToProduct"/>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Ajouter Commande" onAction="#handleAddOrder"/>
+        <Button text="Supprimer Commande" onAction="#handleDeleteOrder"/>
+    </HBox>
+
+    <Label text="Liste des Commandes:"/>
+    <ListView fx:id="orderListView" prefHeight="200" prefWidth="400"/>
+</VBox>

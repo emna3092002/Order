@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+    <BorderPane xmlns="http://javafx.com/javafx/17"
+                xmlns:fx="http://javafx.com/fxml"
+                fx:controller="tn.esprit.controllers.UserController">
+
+        <top>
+            <Label text="Gestion des Utilisateurs" style="-fx-font-size: 18; -fx-padding: 10;"/>
+
+        </top>
+
+        <center>
+            <VBox spacing="10" alignment="CENTER" style="-fx-padding: 15;">
+                <ListView fx:id="userListView" prefHeight="200" prefWidth="300"/>
+            </VBox>
+        </center>
+
+        <bottom>
+            <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+                <TextField fx:id="usernameField" promptText="Nom utilisateur"/>
+                <TextField fx:id="emailField" promptText="Email"/>
+                <Button text="Ajouter" onAction="#handleAddUser"/>
+                <Button text="Supprimer" onAction="#handleDeleteUser"/>
+                <Button fx:id="goToOrderButton" text="Aller aux Commandes" onAction="#handleGoToOrder"/>
+            </HBox>
+        </bottom>
+
+    </BorderPane>
+
