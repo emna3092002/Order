@@ -7,8 +7,8 @@ pipeline {
   }
 
   tools {
-    maven 'Maven3'   // nom tel que configuré dans Global Tool Configuration
-    jdk 'jdk22'      // nom tel que configuré
+    maven 'Maven 3.2.2'   // nom tel que configuré dans Global Tool Configuration
+    jdk 'JDK 22.0.2'      // nom tel que configuré
   }
 
   stages {
