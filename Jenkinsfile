@@ -34,7 +34,16 @@ pipeline {
       steps {
         bat "mvn test"
       }
+    } 
+
+    stage('SonarQube Analysis') {
+  steps {
+    withSonarQubeEnv('SonarQubeLocal') {
+      bat "mvn clean verify sonar:sonar -Dsonar.projectKey=order-app -Dsonar.projectName='Order App'"
     }
+  }
+}
+
 
     stage('Docker Build') {
       steps {
